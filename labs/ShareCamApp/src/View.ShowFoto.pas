@@ -20,6 +20,7 @@ type
     procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
     procedure ShowShareSheetAction1BeforeExecute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -32,6 +33,7 @@ var
 implementation
 
 {$R *.fmx}
+
 uses
 {$IFDEF ANDROID}
   Androidapi.Helpers, Androidapi.JNI.OS, Androidapi.JNI.JavaTypes,
