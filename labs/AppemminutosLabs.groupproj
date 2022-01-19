@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3A9EA6E0-B13F-4EFF-B2A5-55E76CC7C6DD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LocalizApp\LocalizApp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LocalizApp">
+        <MSBuild Projects="LocalizApp\LocalizApp.dproj"/>
+    </Target>
+    <Target Name="LocalizApp:Clean">
+        <MSBuild Projects="LocalizApp\LocalizApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LocalizApp:Make">
+        <MSBuild Projects="LocalizApp\LocalizApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LocalizApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LocalizApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LocalizApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
