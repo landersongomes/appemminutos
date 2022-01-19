@@ -6,6 +6,9 @@
         <Projects Include="LocalizApp\LocalizApp.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="ShareCamApp\ShareCamApp.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +26,23 @@
     <Target Name="LocalizApp:Make">
         <MSBuild Projects="LocalizApp\LocalizApp.dproj" Targets="Make"/>
     </Target>
+    <Target Name="ShareCamApp">
+        <MSBuild Projects="ShareCamApp\ShareCamApp.dproj"/>
+    </Target>
+    <Target Name="ShareCamApp:Clean">
+        <MSBuild Projects="ShareCamApp\ShareCamApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ShareCamApp:Make">
+        <MSBuild Projects="ShareCamApp\ShareCamApp.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="LocalizApp"/>
+        <CallTarget Targets="LocalizApp;ShareCamApp"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="LocalizApp:Clean"/>
+        <CallTarget Targets="LocalizApp:Clean;ShareCamApp:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="LocalizApp:Make"/>
+        <CallTarget Targets="LocalizApp:Make;ShareCamApp:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
