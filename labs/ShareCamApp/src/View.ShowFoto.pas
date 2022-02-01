@@ -53,7 +53,8 @@ end;
 
 procedure TfrmShowFoto.ShowShareSheetAction1BeforeExecute(Sender: TObject);
 begin
-  ShowShareSheetAction1.Bitmap.Assign(ImageFoto.Bitmap);
+  if not ImageFoto.Bitmap.IsEmpty then
+    ShowShareSheetAction1.Bitmap.Assign(ImageFoto.Bitmap);
 end;
 
 procedure TfrmShowFoto.TakePhotoFromCameraAction1DidFinishTaking(

@@ -9,6 +9,9 @@
         <Projects Include="ShareCamApp\ShareCamApp.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="DadosLocaisApp\DadosLocaisApp.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="ShareCamApp:Make">
         <MSBuild Projects="ShareCamApp\ShareCamApp.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DadosLocaisApp">
+        <MSBuild Projects="DadosLocaisApp\DadosLocaisApp.dproj"/>
+    </Target>
+    <Target Name="DadosLocaisApp:Clean">
+        <MSBuild Projects="DadosLocaisApp\DadosLocaisApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DadosLocaisApp:Make">
+        <MSBuild Projects="DadosLocaisApp\DadosLocaisApp.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="LocalizApp;ShareCamApp"/>
+        <CallTarget Targets="LocalizApp;ShareCamApp;DadosLocaisApp"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="LocalizApp:Clean;ShareCamApp:Clean"/>
+        <CallTarget Targets="LocalizApp:Clean;ShareCamApp:Clean;DadosLocaisApp:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="LocalizApp:Make;ShareCamApp:Make"/>
+        <CallTarget Targets="LocalizApp:Make;ShareCamApp:Make;DadosLocaisApp:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
