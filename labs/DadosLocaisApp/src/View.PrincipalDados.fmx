@@ -7,6 +7,7 @@ object FormPrincipal: TFormPrincipal
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 3
   object ToolBarTopo: TToolBar
     Size.Width = 324.000000000000000000
@@ -38,7 +39,7 @@ object FormPrincipal: TFormPrincipal
       OnClick = ButtonConectarClick
     end
   end
-  object Edit1: TEdit
+  object EditPontoTuristico: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     Align = Bottom
     TabOrder = 3
@@ -51,17 +52,6 @@ object FormPrincipal: TFormPrincipal
     Size.Width = 314.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
-  end
-  object NavigatorBindSourceDB1: TBindNavigator
-    Align = MostBottom
-    Position.Y = 487.000000000000000000
-    Size.Width = 324.000000000000000000
-    Size.Height = 25.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 6
-    DataSource = BindSourceDB1
-    xRadius = 4.000000000000000000
-    yRadius = 4.000000000000000000
   end
   object ImageFoto: TImage
     MultiResBitmap = <
@@ -156,65 +146,59 @@ object FormPrincipal: TFormPrincipal
     Size.PlatformDefault = False
     WrapMode = Stretch
   end
-  object Ebook_pontosturisticosConnection: TFDConnection
-    Params.Strings = (
-      'ConnectionDef=Ebook_PontosTuristicos')
-    FetchOptions.AssignedValues = [evMode, evAutoFetchAll]
-    FetchOptions.Mode = fmAll
-    FetchOptions.AutoFetchAll = afTruncate
-    ResourceOptions.AssignedValues = [rvAutoReconnect]
-    ResourceOptions.AutoReconnect = True
-    Connected = True
-    LoginPrompt = False
-    Left = 235
-    Top = 132
+  object NavigatorBindSourceDB1: TBindNavigator
+    Align = MostBottom
+    Position.Y = 487.000000000000000000
+    Size.Width = 324.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    DataSource = BindSourceDB1
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
   end
-  object PontosturisticosTable: TFDQuery
-    Connection = Ebook_pontosturisticosConnection
-    FetchOptions.AssignedValues = [evMode, evAutoFetchAll]
+  object Ebook_pontosturisticosConexao: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\lande\OneDrive - 2Next Trends\Documentos\Embar' +
+        'cadero\Studio\Projects\ebook\appemminutos\labs\DadosLocaisApp\da' +
+        'dos\PONTOSTURISTICOS.sqlite3'
+      'OpenMode=ReadWrite'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    BeforeConnect = Ebook_pontosturisticosConexaoBeforeConnect
+    Left = 104
+    Top = 112
+  end
+  object FDQuery1: TFDQuery
+    Connection = Ebook_pontosturisticosConexao
     SQL.Strings = (
-      'SELECT * FROM PONTOSTURISTICOS')
-    Left = 235
-    Top = 180
-    object PontosturisticosTableID_PONTOTURISTICO: TIntegerField
-      FieldName = 'ID_PONTOTURISTICO'
-      Origin = 'ID_PONTOTURISTICO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object PontosturisticosTableNOME_PONTOTURISTICO: TStringField
-      FieldName = 'NOME_PONTOTURISTICO'
-      Origin = 'NOME_PONTOTURISTICO'
-      Required = True
-      Size = 50
-    end
-    object PontosturisticosTableFOTO_PONTOTURISTICO: TBlobField
-      FieldName = 'FOTO_PONTOTURISTICO'
-      Origin = 'FOTO_PONTOTURISTICO'
-    end
+      'select * from pontosturisticos')
+    Left = 96
+    Top = 192
   end
   object BindSourceDB1: TBindSourceDB
-    DataSet = PontosturisticosTable
+    DataSet = FDQuery1
     ScopeMappings = <>
-    Left = 152
-    Top = 240
+    Left = 184
+    Top = 392
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 20
-    Top = 5
+    Left = 76
+    Top = 389
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'NOME_PONTOTURISTICO'
-      Control = Edit1
+      FieldName = 'nome_pontoturistico'
+      Control = EditPontoTuristico
       Track = False
     end
     object LinkControlToField2: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'FOTO_PONTOTURISTICO'
+      FieldName = 'foto_pontoturistico'
       Control = ImageFoto
       Track = False
     end
