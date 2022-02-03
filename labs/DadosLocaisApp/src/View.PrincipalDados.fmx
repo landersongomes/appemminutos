@@ -170,7 +170,7 @@ object FormPrincipal: TFormPrincipal
     Left = 104
     Top = 112
   end
-  object FDQuery1: TFDQuery
+  object PontosTuristicosTabela: TFDQuery
     Connection = Ebook_pontosturisticosConexao
     SQL.Strings = (
       'select * from pontosturisticos')
@@ -178,7 +178,7 @@ object FormPrincipal: TFormPrincipal
     Top = 192
   end
   object BindSourceDB1: TBindSourceDB
-    DataSet = FDQuery1
+    DataSet = PontosTuristicosTabela
     ScopeMappings = <>
     Left = 184
     Top = 392

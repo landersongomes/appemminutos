@@ -24,7 +24,7 @@ type
     EditPontoTuristico: TEdit;
     ImageFoto: TImage;
     Ebook_pontosturisticosConexao: TFDConnection;
-    FDQuery1: TFDQuery;
+    PontosTuristicosTabela: TFDQuery;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
     LinkControlToField1: TLinkControlToField;
@@ -54,7 +54,7 @@ uses
 procedure TFormPrincipal.ButtonConectarClick(Sender: TObject);
 begin
   Ebook_pontosturisticosConexao.Open;
-  FDQuery1.Open('select * from pontosturisticos');
+  PontosTuristicosTabela.Open('select * from pontosturisticos');
 
 end;
 
