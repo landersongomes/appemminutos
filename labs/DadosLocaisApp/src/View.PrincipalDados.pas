@@ -55,7 +55,6 @@ procedure TFormPrincipal.ButtonConectarClick(Sender: TObject);
 begin
   Ebook_pontosturisticosConexao.Open;
   PontosTuristicosTabela.Open('select * from pontosturisticos');
-
 end;
 
 procedure TFormPrincipal.Ebook_pontosturisticosConexaoBeforeConnect(
@@ -63,7 +62,7 @@ procedure TFormPrincipal.Ebook_pontosturisticosConexaoBeforeConnect(
 begin
   {$IF DEFINED(iOS) or DEFINED(ANDROID)}
     Ebook_pontosturisticosConexao.Params.Values['Database'] :=
-        TPath.Combine(TPath.GetDocumentsPath, 'PONTOSTURISTICOS.sqlite3');
+          TPath.Combine(TPath.GetDocumentsPath, 'PONTOSTURISTICOS.sqlite3');
   {$ENDIF}
 end;
 
