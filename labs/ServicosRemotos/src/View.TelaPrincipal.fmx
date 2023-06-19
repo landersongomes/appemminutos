@@ -137,10 +137,12 @@ object TelaPrincipal: TTelaPrincipal
     Top = 152
   end
   object RESTResponseNumVerify: TRESTResponse
+    ContentType = 'application/json'
     Left = 128
     Top = 232
   end
   object RESTResponseDataSetAdapterNumVerify: TRESTResponseDataSetAdapter
+    Active = True
     Dataset = FDMemTableNumVerify
     FieldDefs = <>
     Response = RESTResponseNumVerify
@@ -149,7 +151,54 @@ object TelaPrincipal: TTelaPrincipal
     Top = 304
   end
   object FDMemTableNumVerify: TFDMemTable
-    FieldDefs = <>
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'valid'
+        DataType = ftBoolean
+      end
+      item
+        Name = 'number'
+        DataType = ftLargeint
+      end
+      item
+        Name = 'local_format'
+        DataType = ftWideString
+        Size = 16
+      end
+      item
+        Name = 'international_format'
+        DataType = ftLargeint
+      end
+      item
+        Name = 'country_prefix'
+        DataType = ftInteger
+      end
+      item
+        Name = 'country_code'
+        DataType = ftWideString
+        Size = 2
+      end
+      item
+        Name = 'country_name'
+        DataType = ftWideString
+        Size = 31
+      end
+      item
+        Name = 'location'
+        DataType = ftWideString
+        Size = 14
+      end
+      item
+        Name = 'carrier'
+        DataType = ftWideString
+        Size = 20
+      end
+      item
+        Name = 'line_type'
+        DataType = ftWideString
+        Size = 8
+      end>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll

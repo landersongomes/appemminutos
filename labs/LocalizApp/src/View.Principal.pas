@@ -37,7 +37,7 @@ implementation
 {$R *.fmx}
 uses
 {$IFDEF ANDROID}
-  Androidapi.Helpers, Androidapi.JNI.OS,
+  Androidapi.Helpers, Androidapi.JNI.OS, Androidapi.Jni.JavaTypes,
 {$ENDIF}
   System.Permissions;
 procedure TfrmPrincipal.Ativar(AValor: boolean);
@@ -48,17 +48,9 @@ begin
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
-{$IFDEF ANDROID}
-var
-  lCOARSE, lFINE : string;
-{$ENDIF}
 begin
 {$IFDEF ANDROID}
-//  lCOARSE := JStringToString(TJManifest_permission.JavaClass.ACCESS_COARSE_LOCATION);
-//  lFINE   :=  JStringToString(TJManifest_permission.JavaClass.ACCESS_FINE_LOCATION);
-
   PermissionsService.RequestPermissions([
-//                                          JStringToString(TJManifest_permission.JavaClass.ACCESS_COARSE_LOCATION),
                                           JStringToString(TJManifest_permission.JavaClass.ACCESS_FINE_LOCATION)],
                                           nil,
                                           nil);
@@ -85,7 +77,6 @@ end;
 
 procedure TfrmPrincipal.SwitchAtivarSwitch(Sender: TObject);
 begin
-//  LocationSensorPosicao.Active := SwitchAtivar.IsChecked;
   Ativar(SwitchAtivar.IsChecked);
 
 end;

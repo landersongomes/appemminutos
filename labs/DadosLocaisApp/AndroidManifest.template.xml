@@ -21,8 +21,7 @@
         android:theme="%theme%"
         android:hardwareAccelerated="%hardwareAccelerated%"
         android:resizeableActivity="false"
-        android:requestLegacyExternalStorage="true"
-		android:networkSecurityConfig="@xml/network_security_config">
+        android:requestLegacyExternalStorage="true">
 <%provider%>
 <%application-meta-data%>
 <%uses-libraries%>

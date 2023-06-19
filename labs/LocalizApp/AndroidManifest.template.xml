@@ -21,8 +21,7 @@
         android:theme="%theme%"
         android:hardwareAccelerated="%hardwareAccelerated%"
         android:resizeableActivity="false"
-        android:requestLegacyExternalStorage="true"
-		android:networkSecurityConfig="@xml/network_security_config">
+        android:requestLegacyExternalStorage="true">
 <%provider%>
 <%application-meta-data%>
 <%uses-libraries%>
@@ -34,6 +33,7 @@
             android:exported="true"
             android:label="%activityLabel%"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:allowBackup="false"
             android:launchMode="singleTask">
             <!-- Tell NativeActivity the name of our .so -->
             <meta-data android:name="android.app.lib_name" android:value="%libNameValue%" />
