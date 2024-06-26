@@ -6,3 +6,7 @@
 ### Capa: Flávia Pissolatto.
 ### ISBN 978-65-01-03604-5.
 ### Edição 1 - 2024
+
+
+
+[![Watch the video](https://img.youtube.com/vi/dzIuwpxiuxE/maxresdefault.jpg)](https://youtu.be/dzIuwpxiuxE)
