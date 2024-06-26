@@ -9,4 +9,4 @@
 
 
 
-[![Watch the video](https://img.youtube.com/vi/dzIuwpxiuxE/maxresdefault.jpg)](https://youtu.be/dzIuwpxiuxE)
+[![Watch the video](https://img.youtube.com/vi/dzIuwpxiuxE/maxresdefault.jpg)](https://youtu.be/dzIuwpxiuxE){:target="_blank"}
