@@ -8,5 +8,7 @@
 ### Edição 1 - 2024
 
 
+<a href="https://youtu.be/dzIuwpxiuxE" target="_blank"><img src="https://img.youtube.com/vi/dzIuwpxiuxE/maxresdefault.jpg" width=30% heigth=30%></a>
 
-[![Watch the video](https://img.youtube.com/vi/dzIuwpxiuxE/maxresdefault.jpg){:target="_blank"}](https://youtu.be/dzIuwpxiuxE)
+
+[![Watch the video](https://img.youtube.com/vi/dzIuwpxiuxE/maxresdefault.jpg)](https://youtu.be/dzIuwpxiuxE)
