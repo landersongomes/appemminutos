@@ -1,11 +1,15 @@
 # Desenvolvendo Apps em Minutos
-## Criando aplicativos com pouquíssimas linhas de código
-<img src="/imagens/mockup_livro-.png" width=30% heigth=30%>
+**Criando aplicativos com pouquíssimas linhas de código**
+<p><img src="/imagens/mockup_livro-.png" width=30% heigth=30%></p>
 
 **Autor: Landerson Gomes dos Santos**.<br>
 **Capa: Flávia Pissolatto**.<br>
 **ISBN 978-65-01-03604-5**.<br>
 *Edição 1 - 2024*
+
+## Comprar ##
+🛒 https://loja.uiclap.com/titulo/ua57965
+<P></P>
 
 ### Sobre o livro ###
 <p>Este livro tem por objetivo apresentar um pouco das possibilidades do cenário de desenvolvimento de aplicativos para dispositivos móveis, um mercado com constante demanda por profissionais e soluções. A obra conta com uma seção prática passo a passo para a criação de aplicativos funcionais com pouquíssimas linhas de código, sem necessidade de grande embasamento técnico, mas que podem ser o ponto de partida para você embarcar nesta incrível jornada.</p>
