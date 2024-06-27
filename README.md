@@ -17,6 +17,19 @@ No dispositivo, você precisa executar uma sequência de comandos para liberar o
 <a href="https://youtu.be/KIGbbI1uPLI" target="_blank"><img src="/imagens/miniaturas_video/DepuracaoUSB.jpg" width=30% heigth=30%></a>
 <p>
 👉 <a href="https://youtu.be/KIGbbI1uPLI" target="_blank"> Clique aqui para assistir um vídeo demonstrando o procedimento de ativação da **Depuração USB**</a>
+
+### Labs ###
+<p>Os projetos de exemplo apresentados no livro são disponibilizados aqui:</p>
+
+* <a  href="/labs/LocalizApp" target="_blank">Localização através do Sensor de Localização<a/>.
+* <a  href="/labs/ShareCamApp" target="_blank">Interação com a câmera e compartilhamento<a/>.
+* <a  href="/labs/DadosLocaisApp" target="_blank">Armazenamento de dados localmente em arquivo de banco de dados<a/>.
+* <a  href="/labs/ServicosRemotos" target="_blank">Conexões a serviços externos através de Web API<a/>.
+
+### Vídeos ###
+Para cada um dos exemplos há um vídeo demonstrado o referido exemplo em funcionamento, estes podem ser acessados através da leitura dos QR Codes disponibilizados na publicação.
+
+  
 </p>
 
 
