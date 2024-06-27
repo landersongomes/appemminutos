@@ -1,5 +1,5 @@
 # Desenvolvendo Apps em Minutos
-## Criando aplicativos com pouqíssimas linhas de código
+## Criando aplicativos com pouquíssimas linhas de código
 <img src="/imagens/mockup_livro-.png" width=30% heigth=30%>
 
 **Autor: Landerson Gomes dos Santos**.<br>
