@@ -10,7 +10,7 @@
 🛒 https://loja.uiclap.com/titulo/ua57965
 <P></P>
 
-### Sobre o livro ###
+### About the book ###
 <p>This book aims to present some of the possibilities of the mobile application development scenario, a market with constant demand for professionals and solutions. 
   The work has a practical step-by-step section for creating functional applications with very few lines of code, without the need for a great technical background, 
   but which can be the starting point for you to embark on this incredible journey.</p>
